@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\NavBar;
 
 class HomeController extends Controller
 {
@@ -21,8 +22,10 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
-    public function index()
+
+
+    public function myadmin()
     {
-        return view('home');
+        return view('myadmin');
     }
 }

@@ -77,3 +77,15 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+
+
+
+
+
+
+Ажиллуулах заавар:
+1. laravel suulgah
+2. composer suulgah
+3. composer install - command-r heregtseetei sanguudiig suulgah
+4. php artisan serve - command-r ajillulah

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\NavBar;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,19 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+
+Route::group(['prefix' =>'admin'],function(){
+    Route::get('/','HomeController@myadmin');
 });
 
+Route::get('/','MyController@index');
+Route::get('/election','MyController@election');
+Route::get('/education','MyController@education');
+Route::get('/news','MyController@news');
+Route::get('/around','MyController@around');
+Route::get('/page2','MyController@page');
+
+
+
 Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
 
 
-Route::group(['prefix' => 'admin'], function () {
-    Voyager::routes();
-});
