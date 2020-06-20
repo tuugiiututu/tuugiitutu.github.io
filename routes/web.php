@@ -17,6 +17,8 @@ use App\NavBar;
 
 Route::group(['prefix' =>'admin'],function(){
     Route::get('/','HomeController@myadmin');
+    Route::get('/makeMenu','MyController@makeMenu');
+    Route::post('/makeMenu/save','MyController@makeMenu');
 });
 
 Route::get('/','MyController@index');
@@ -30,5 +32,7 @@ Route::get('/page2','MyController@page');
 
 Auth::routes();
 Route::get('/logout', '\App\Http\Controllers\Auth\LoginController@logout');
+
+
 
 

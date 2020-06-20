@@ -1,6 +1,5 @@
 
-@extends('layouts/app')
-@section('content')
-
-    welcome page2
-@endsection
+@extends('welcome')
+    @section('content')
+        welcome page2
+    @endsection

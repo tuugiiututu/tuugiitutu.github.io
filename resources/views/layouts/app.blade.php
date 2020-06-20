@@ -34,9 +34,8 @@
 </head>
 
 <body class="container">
-
     @include('header')
-    <div id="app">
+    <div class="main" id="app">
         <main class="py-4">
             @yield('content')
         </main>
@@ -53,7 +52,7 @@
     #footer {
         position: absolute;
         bottom: 0;
-        width: 60%;
+        width: 1100px;
         height: 2.5rem;
         /* Footer height */
     }

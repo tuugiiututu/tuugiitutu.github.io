@@ -1,15 +1,18 @@
-<div class="col-3">
+<div class="col-2">
     <h5>
        Welcome - Admin
     </h5>
     <nav id="sidebar">
         <div id="myDIV">
             <ul class="list-unstyled components ">
-                <li class="active navBTN">
-                    <a href="#">Menu Maker <hr></a>
+                <li class="active navBTN p-0">
+                    <a href="/admin/makeMenu">Menu Maker <hr></a>
                 </li>
-                <li class="navBTN">
+                <li  class="navBTN p-0">
                     <a href="#">Post Maker <hr></a>
+                </li>
+                <li class="navBTN p-0">
+                    <a href="#">Post List <hr></a>
                 </li>
             </ul>
         </div>

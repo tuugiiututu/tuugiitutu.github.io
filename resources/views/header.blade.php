@@ -14,7 +14,7 @@
                     @foreach ( App\Http\Controllers\Controller::getParents($item->id) as $par)
                     @if ($par->sub_parent_id!=0)
                     <li class="dropdown-submenu dropright">
-                        <a class="dropdown-item dropdown-toggle " href="{{$par->url}}">{{$par->name}}</a>
+                        <a class="dropdown-item dropdown-toggle {{ '/'.Request::path()==$par->url ? 'active' : '' }} " href="{{$par->url}}">{{$par->name}}</a>
                         @if (App\Http\Controllers\Controller::getSubParentName($par->id) )
                         <ul class="dropdown-menu ">
                             @foreach (App\Http\Controllers\Controller::getSubParentName($par->id) as $par )
@@ -32,9 +32,8 @@
 
             </div>
             @else
-
-            <a class="nav-link navBTN @if($item->id==1) active @endif" href="{{$item->url}}">{{$item->name}}</a>
-
+            {{-- @if($item->id==1) active @endif --}}
+        <a class="nav-link @if($item->id==1)  {{ Request::path()==$item->url ? 'active' : ''}} @else {{'/'.Request::path()==$item->url ? 'active' : ''}} @endif  " href="{{$item->url}}">{{$item->name}}</a>
             @endif
         </li>
         @endforeach
